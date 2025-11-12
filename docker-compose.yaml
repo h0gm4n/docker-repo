@@ -6,3 +6,9 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     container_name: watchtower
+  docker-repo:
+    image: atteh0gm4n/docker-repo:latest
+    ports:
+      - "8080:8080"
+    container_name: docker-repo
+    restart: always
